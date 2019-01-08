@@ -8,5 +8,6 @@ const userSchema = new Schema({
   timestamps: true
 });
 
+// Mes users seront enregistrés dans ma base mongodb User 
 const User = mongoose.model("User", userSchema);
 module.exports = User;
