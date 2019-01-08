@@ -1,5 +1,6 @@
 # Dependency directory
 node_modules
+public/bower_components
 
 # Debug log from npm
 npm-debug.log
