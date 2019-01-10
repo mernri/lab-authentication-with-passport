@@ -38,6 +38,10 @@ const debug = require("debug")(
 
 const app = express();
 
+
+// Middleware flash
+app.use(flash());
+
 // Middleware Setup
 app.use(logger("dev"));
 app.use(bodyParser.json());

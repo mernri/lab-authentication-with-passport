@@ -69,12 +69,12 @@ passportRouter.post("/signup", (req, res, next) => {
     });
 });
 
-// GET ROUTE - SIGNUP
+// GET ROUTE - LOGIN
 passportRouter.get("/login", (req, res, next) => {
   res.render("passport/login");
 });
 
-// POST ROUTE - SIGNUP
+// POST ROUTE - LOGIN
 passportRouter.post(
   "/login",
   passport.authenticate("local", {
@@ -84,5 +84,11 @@ passportRouter.post(
     passReqToCallback: true
   })
 );
+
+// LOGOUT ROUTE - GET
+passportRouter.get("/logout", (req, res) => {
+  req.logout();
+  res.redirect("/login");
+});
 
 module.exports = passportRouter;
